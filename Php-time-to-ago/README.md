@@ -6,7 +6,11 @@ Sure, you might not know exactly when that was, but the assumption is that the e
 Using:
 >
 Posting date: 
-`$date = new DateTime('2021-10-31');`
+```php 
+$date = new DateTime('2021-10-31');
+```
 
 Return date to text:
-`to_time_ago($date->format('Y-m-d'))`
+```php 
+to_time_ago($date->format('Y-m-d'))
+```
