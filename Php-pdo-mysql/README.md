@@ -5,19 +5,31 @@
 
 ![php-pdo](https://user-images.githubusercontent.com/96316784/161591401-5e20f851-bd11-4c11-b60f-6f88a18c1d86.svg)
 >
-## Defining constants::
-* DB-Hostname: `define('DBHOST','localhost');`
-* DB-User: `define('DBUSER','root');`
-* DB-Password: `define('DBPASSWORD','your-password');`
-* DB-name: `define('DBNAME','your-database-name');`
+## Defining constants:
+```php
+define('DBHOST','localhost');
+define('DBUSER','root');
+define('DBPASSWORD','your-password');
+define('DBNAME','your-database-name');
+```
 >
 ## Connection
 To connect to the MySQL database server, you use the following data source name format:
-* Connection: `$this->connection = new PDO('mysql:host='.$this->dbhost.';dbname='.$this->dbname,$this->dbuser,$this->dbpass);`
-* Attribute: `$this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);`
+* Connection: 
+```php 
+$this->connection = new PDO('mysql:host='.$this->dbhost.';dbname='.$this->dbname,$this->dbuser,$this->dbpass);
+```
+* Attribute: 
+```php 
+$this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+```
      
 ## Using
-For using the connection first get the instance: 
-`$db = DB::getInstance();`
+For using the connection first get the instance:
+```php 
+$db = DB::getInstance();
+```
 Then, make connection:
-`$conn = $db->getConnection();`
+```php
+$conn = $db->getConnection();
+```
